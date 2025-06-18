@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+
+package com.zwash.common.grpc;
+
+
+import "google/protobuf/empty.proto";
+option java_multiple_files = true;
+option java_package = "com.zwash.common.grpc";
+
+
+message WashingProgram {
+  string id = 1;
+  string stationId = 2;
+  string programType = 3;
+  string description = 4;
+  double price = 5;
+}
+message CarWashingProgramRequest {
+  int64 id = 1;
+}
+
+message GetWashingProgramRequest {
+  int64 id = 1;
+}
+message CarWashingProgramResponse {
+  int64 id = 1;
+  string programType = 2;
+  string description = 3;
+  double price = 4;
+}
+
+service CarWashingProgramService {
+  rpc GetCarWashingProgram(CarWashingProgramRequest) returns (CarWashingProgramResponse);
+  rpc GetAllCarWashingPrograms(google.protobuf.Empty) returns (CarWashingProgramListResponse);
+  rpc GetProgramById(GetWashingProgramRequest) returns (CarWashingProgramResponse);
+}
+
+message CarWashingProgramListResponse {
+  repeated CarWashingProgramResponse programs = 1;
+}
