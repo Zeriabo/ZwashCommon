@@ -2,6 +2,9 @@ package com.zwash.common.pojos;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
@@ -42,11 +45,11 @@ public abstract class CarWashingProgram {
 	@Column(name = "price")
 	private double price;
 
-
+	@CreationTimestamp
 	@Column(name = "createdAt")
 	private LocalDateTime createdAt;
 
-
+	@UpdateTimestamp
 	@Column(name = "updatedAt")
 	private LocalDateTime updatedAt;
 
@@ -76,7 +79,7 @@ public abstract class CarWashingProgram {
 	}
 
 	public Station getStation() {
-		return  this.station;
+		return station;
 	}
 
 	public void setStation(Station station) {

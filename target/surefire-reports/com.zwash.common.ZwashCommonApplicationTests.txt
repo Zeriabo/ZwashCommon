@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: com.zwash.common.ZwashCommonApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.296 s -- in com.zwash.common.ZwashCommonApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! -- in com.zwash.common.ZwashCommonApplicationTests
+com.zwash.common.ZwashCommonApplicationTests -- Time elapsed: 0.022 s <<< ERROR!
+java.lang.NoClassDefFoundError: org/slf4j/impl/StaticLoggerBinder
+	at org.slf4j.LoggerFactory.getSingleton(LoggerFactory.java:223)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:120)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:111)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:269)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:242)
+	at org.apache.commons.logging.LogAdapter$Slf4jAdapter.createLocationAwareLog(LogAdapter.java:121)
+	at org.apache.commons.logging.LogAdapter.createLog(LogAdapter.java:95)
+	at org.apache.commons.logging.LogFactory.getLog(LogFactory.java:67)
+	at org.apache.commons.logging.LogFactory.getLog(LogFactory.java:59)
+	at org.springframework.test.context.TestContextManager.<clinit>(TestContextManager.java:93)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getTestContextManager(SpringExtension.java:366)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.beforeAll(SpringExtension.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.ClassNotFoundException: org.slf4j.impl.StaticLoggerBinder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 13 more
+

@@ -13,7 +13,6 @@ import com.zwash.common.pojos.CarWashingProgram;
 import com.zwash.common.pojos.Media;
 import com.zwash.common.pojos.Station;
 
-
 @Repository
 public interface StationRepository extends JpaRepository<Station, Long> {
 
@@ -25,10 +24,10 @@ public interface StationRepository extends JpaRepository<Station, Long> {
 	List<Station> findByServiceProvider(@Param("id") Long id);
 
 	@Query("""
-            SELECT cw \
-            FROM CarWashingProgram cw \
-            WHERE cw.station.id =:id\
-            """)
+			SELECT cw \
+			FROM CarWashingProgram cw \
+			WHERE cw.station.id =:id\
+			""")
 	List<CarWashingProgram> getWashes(@Param("id") Long id);
 
 	@Modifying
@@ -38,7 +37,6 @@ public interface StationRepository extends JpaRepository<Station, Long> {
 	@Modifying
 	@Query("UPDATE Station s SET s.latitude = :latitude, s.longitude = :longitude WHERE s.id = :id")
 	void setAddress(@Param("id") Long id, @Param("latitude") Long latitude, @Param("longitude") Long longitude);
-
 
 	@Query("SELECT s FROM Station s WHERE s.serviceProvider.id = :id")
 	List<Station> selectAllStationsByServiceProvider(@Param("id") Long id);

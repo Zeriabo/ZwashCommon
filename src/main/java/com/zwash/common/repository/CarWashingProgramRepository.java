@@ -1,6 +1,5 @@
 package com.zwash.common.repository;
 
-
 import java.util.List;
 import java.util.Optional;
 
@@ -11,15 +10,13 @@ import org.springframework.stereotype.Repository;
 
 import com.zwash.common.pojos.CarWashingProgram;
 
-
 @Repository
 public interface CarWashingProgramRepository extends JpaRepository<CarWashingProgram, Long> {
 
+	@Query("SELECT c FROM CarWashingProgram c WHERE c.station.id = :stationId")
+	List<CarWashingProgram> findByStationId(@Param("stationId") Long stationId);
 
-	 @Query("SELECT c FROM CarWashingProgram c WHERE c.station.id = :stationId")
-	    List<CarWashingProgram> findByStationId(@Param("stationId") Long stationId);
-
-@Override
-@Query("SELECT c FROM CarWashingProgram c WHERE c.id = :id")
-Optional<CarWashingProgram> findById(@Param("id") Long id);
+	@Override
+	@Query("SELECT c FROM CarWashingProgram c WHERE c.id = :id")
+	Optional<CarWashingProgram> findById(@Param("id") Long id);
 }

@@ -150,7 +150,7 @@ public class User {
 		setUpdatedAt(LocalDateTime.now());
 	}
 
-	@Id
+	 @Id
 	 @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq_gen")
      @Column(name = "id", unique = true, nullable = false)
 	 @ApiModelProperty(value = "The unique ID of the user.", example = "1")
