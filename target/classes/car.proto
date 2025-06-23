@@ -3,6 +3,11 @@ syntax = "proto3";
 package com.zwash.common.grpc;
 
 option java_multiple_files = true;
+option java_package = "com.zwash.common.grpc";
+option java_outer_classname = "CarServiceProto";
+
+import "user.proto";
+
 service CarService {
   rpc GetCar(CarRequest) returns (CarResponse);
 }
@@ -16,4 +21,6 @@ message CarResponse {
   string brand = 2;
   string model = 3;
   string licensePlate = 4;
+
+  UserResponse user = 5;
 }

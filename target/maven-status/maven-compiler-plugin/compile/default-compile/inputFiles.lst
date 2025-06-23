@@ -34,11 +34,11 @@
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/grpc-java/com/zwash/common/grpc/ServiceProviderServiceGrpc.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/grpc-java/com/zwash/common/grpc/StationServiceGrpc.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/grpc-java/com/zwash/common/grpc/UserServiceGrpc.java
-/Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/Car.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarRequest.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarRequestOrBuilder.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarResponse.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarResponseOrBuilder.java
+/Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarServiceProto.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarWashingProgram.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarWashingProgramListResponse.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/CarWashingProgramListResponseOrBuilder.java
@@ -55,7 +55,7 @@
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/ServiceProviderRequestOrBuilder.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/ServiceProviderResponse.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/ServiceProviderResponseOrBuilder.java
-/Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/Station.java
+/Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/StationProto.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/StationRequest.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/StationRequestOrBuilder.java
 /Users/zeriab/git/zwash-k8s/services/ZwashCommon/target/generated-sources/protobuf/java/com/zwash/common/grpc/StationResponse.java

@@ -30,17 +30,18 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.zwash.common.grpc.Station.internal_static_com_zwash_common_grpc_StationResponse_descriptor;
+    return com.zwash.common.grpc.StationProto.internal_static_com_zwash_common_grpc_StationResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.zwash.common.grpc.Station.internal_static_com_zwash_common_grpc_StationResponse_fieldAccessorTable
+    return com.zwash.common.grpc.StationProto.internal_static_com_zwash_common_grpc_StationResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.zwash.common.grpc.StationResponse.class, com.zwash.common.grpc.StationResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   private long id_ = 0L;
   /**
@@ -152,6 +153,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SERVICEPROVIDER_FIELD_NUMBER = 6;
+  private com.zwash.common.grpc.ServiceProviderResponse serviceProvider_;
+  /**
+   * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+   * @return Whether the serviceProvider field is set.
+   */
+  @java.lang.Override
+  public boolean hasServiceProvider() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+   * @return The serviceProvider.
+   */
+  @java.lang.Override
+  public com.zwash.common.grpc.ServiceProviderResponse getServiceProvider() {
+    return serviceProvider_ == null ? com.zwash.common.grpc.ServiceProviderResponse.getDefaultInstance() : serviceProvider_;
+  }
+  /**
+   * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+   */
+  @java.lang.Override
+  public com.zwash.common.grpc.ServiceProviderResponseOrBuilder getServiceProviderOrBuilder() {
+    return serviceProvider_ == null ? com.zwash.common.grpc.ServiceProviderResponse.getDefaultInstance() : serviceProvider_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -181,6 +208,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, address_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(6, getServiceProvider());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -207,6 +237,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, address_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getServiceProvider());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -235,6 +269,11 @@ private static final long serialVersionUID = 0L;
             other.getLongitude())) return false;
     if (!getAddress()
         .equals(other.getAddress())) return false;
+    if (hasServiceProvider() != other.hasServiceProvider()) return false;
+    if (hasServiceProvider()) {
+      if (!getServiceProvider()
+          .equals(other.getServiceProvider())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -259,6 +298,10 @@ private static final long serialVersionUID = 0L;
         java.lang.Double.doubleToLongBits(getLongitude()));
     hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getAddress().hashCode();
+    if (hasServiceProvider()) {
+      hash = (37 * hash) + SERVICEPROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceProvider().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -365,26 +408,32 @@ private static final long serialVersionUID = 0L;
       com.zwash.common.grpc.StationResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zwash.common.grpc.Station.internal_static_com_zwash_common_grpc_StationResponse_descriptor;
+      return com.zwash.common.grpc.StationProto.internal_static_com_zwash_common_grpc_StationResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zwash.common.grpc.Station.internal_static_com_zwash_common_grpc_StationResponse_fieldAccessorTable
+      return com.zwash.common.grpc.StationProto.internal_static_com_zwash_common_grpc_StationResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.zwash.common.grpc.StationResponse.class, com.zwash.common.grpc.StationResponse.Builder.class);
     }
 
     // Construct using com.zwash.common.grpc.StationResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getServiceProviderFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -395,13 +444,18 @@ private static final long serialVersionUID = 0L;
       latitude_ = 0D;
       longitude_ = 0D;
       address_ = "";
+      serviceProvider_ = null;
+      if (serviceProviderBuilder_ != null) {
+        serviceProviderBuilder_.dispose();
+        serviceProviderBuilder_ = null;
+      }
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.zwash.common.grpc.Station.internal_static_com_zwash_common_grpc_StationResponse_descriptor;
+      return com.zwash.common.grpc.StationProto.internal_static_com_zwash_common_grpc_StationResponse_descriptor;
     }
 
     @java.lang.Override
@@ -443,6 +497,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.address_ = address_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.serviceProvider_ = serviceProviderBuilder_ == null
+            ? serviceProvider_
+            : serviceProviderBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -508,6 +570,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (other.hasServiceProvider()) {
+        mergeServiceProvider(other.getServiceProvider());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -559,6 +624,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getServiceProviderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -814,6 +886,127 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private com.zwash.common.grpc.ServiceProviderResponse serviceProvider_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.zwash.common.grpc.ServiceProviderResponse, com.zwash.common.grpc.ServiceProviderResponse.Builder, com.zwash.common.grpc.ServiceProviderResponseOrBuilder> serviceProviderBuilder_;
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     * @return Whether the serviceProvider field is set.
+     */
+    public boolean hasServiceProvider() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     * @return The serviceProvider.
+     */
+    public com.zwash.common.grpc.ServiceProviderResponse getServiceProvider() {
+      if (serviceProviderBuilder_ == null) {
+        return serviceProvider_ == null ? com.zwash.common.grpc.ServiceProviderResponse.getDefaultInstance() : serviceProvider_;
+      } else {
+        return serviceProviderBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     */
+    public Builder setServiceProvider(com.zwash.common.grpc.ServiceProviderResponse value) {
+      if (serviceProviderBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        serviceProvider_ = value;
+      } else {
+        serviceProviderBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     */
+    public Builder setServiceProvider(
+        com.zwash.common.grpc.ServiceProviderResponse.Builder builderForValue) {
+      if (serviceProviderBuilder_ == null) {
+        serviceProvider_ = builderForValue.build();
+      } else {
+        serviceProviderBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     */
+    public Builder mergeServiceProvider(com.zwash.common.grpc.ServiceProviderResponse value) {
+      if (serviceProviderBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          serviceProvider_ != null &&
+          serviceProvider_ != com.zwash.common.grpc.ServiceProviderResponse.getDefaultInstance()) {
+          getServiceProviderBuilder().mergeFrom(value);
+        } else {
+          serviceProvider_ = value;
+        }
+      } else {
+        serviceProviderBuilder_.mergeFrom(value);
+      }
+      if (serviceProvider_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     */
+    public Builder clearServiceProvider() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      serviceProvider_ = null;
+      if (serviceProviderBuilder_ != null) {
+        serviceProviderBuilder_.dispose();
+        serviceProviderBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     */
+    public com.zwash.common.grpc.ServiceProviderResponse.Builder getServiceProviderBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getServiceProviderFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     */
+    public com.zwash.common.grpc.ServiceProviderResponseOrBuilder getServiceProviderOrBuilder() {
+      if (serviceProviderBuilder_ != null) {
+        return serviceProviderBuilder_.getMessageOrBuilder();
+      } else {
+        return serviceProvider_ == null ?
+            com.zwash.common.grpc.ServiceProviderResponse.getDefaultInstance() : serviceProvider_;
+      }
+    }
+    /**
+     * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.zwash.common.grpc.ServiceProviderResponse, com.zwash.common.grpc.ServiceProviderResponse.Builder, com.zwash.common.grpc.ServiceProviderResponseOrBuilder> 
+        getServiceProviderFieldBuilder() {
+      if (serviceProviderBuilder_ == null) {
+        serviceProviderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.zwash.common.grpc.ServiceProviderResponse, com.zwash.common.grpc.ServiceProviderResponse.Builder, com.zwash.common.grpc.ServiceProviderResponseOrBuilder>(
+                getServiceProvider(),
+                getParentForChildren(),
+                isClean());
+        serviceProvider_ = null;
+      }
+      return serviceProviderBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

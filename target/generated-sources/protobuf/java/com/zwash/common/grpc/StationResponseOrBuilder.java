@@ -49,4 +49,19 @@ public interface StationResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAddressBytes();
+
+  /**
+   * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+   * @return Whether the serviceProvider field is set.
+   */
+  boolean hasServiceProvider();
+  /**
+   * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+   * @return The serviceProvider.
+   */
+  com.zwash.common.grpc.ServiceProviderResponse getServiceProvider();
+  /**
+   * <code>.com.zwash.common.grpc.ServiceProviderResponse serviceProvider = 6;</code>
+   */
+  com.zwash.common.grpc.ServiceProviderResponseOrBuilder getServiceProviderOrBuilder();
 }

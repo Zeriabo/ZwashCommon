@@ -49,4 +49,19 @@ public interface CarResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLicensePlateBytes();
+
+  /**
+   * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+   * @return Whether the user field is set.
+   */
+  boolean hasUser();
+  /**
+   * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+   * @return The user.
+   */
+  com.zwash.common.grpc.UserResponse getUser();
+  /**
+   * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+   */
+  com.zwash.common.grpc.UserResponseOrBuilder getUserOrBuilder();
 }

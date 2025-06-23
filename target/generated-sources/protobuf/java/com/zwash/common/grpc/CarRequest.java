@@ -28,13 +28,13 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarRequest_descriptor;
+    return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarRequest_fieldAccessorTable
+    return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.zwash.common.grpc.CarRequest.class, com.zwash.common.grpc.CarRequest.Builder.class);
   }
@@ -217,13 +217,13 @@ private static final long serialVersionUID = 0L;
       com.zwash.common.grpc.CarRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarRequest_descriptor;
+      return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarRequest_fieldAccessorTable
+      return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.zwash.common.grpc.CarRequest.class, com.zwash.common.grpc.CarRequest.Builder.class);
     }
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarRequest_descriptor;
+      return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarRequest_descriptor;
     }
 
     @java.lang.Override

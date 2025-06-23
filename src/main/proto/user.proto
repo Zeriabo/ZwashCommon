@@ -22,8 +22,11 @@ message UserResponse {
   string dateOfBirth = 5;
   bool active = 6;
   bool admin = 7;
+  string token = 8;
+
 }
 service UserService {
   rpc GetUserById (UserIdRequest) returns (UserResponse);
   rpc GetUserFromToken (TokenRequest) returns (UserResponse);
+
 }

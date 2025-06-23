@@ -4,8 +4,8 @@
 // Protobuf Java Version: 3.25.1
 package com.zwash.common.grpc;
 
-public final class Car {
-  private Car() {}
+public final class CarServiceProto {
+  private CarServiceProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -34,17 +34,20 @@ public final class Car {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tcar.proto\022\025com.zwash.common.grpc\"\030\n\nCa" +
-      "rRequest\022\n\n\002id\030\001 \001(\003\"M\n\013CarResponse\022\n\n\002i" +
-      "d\030\001 \001(\003\022\r\n\005brand\030\002 \001(\t\022\r\n\005model\030\003 \001(\t\022\024\n" +
-      "\014licensePlate\030\004 \001(\t2]\n\nCarService\022O\n\006Get" +
-      "Car\022!.com.zwash.common.grpc.CarRequest\032\"" +
-      ".com.zwash.common.grpc.CarResponseB\002P\001b\006" +
-      "proto3"
+      "\n\tcar.proto\022\025com.zwash.common.grpc\032\nuser" +
+      ".proto\"\030\n\nCarRequest\022\n\n\002id\030\001 \001(\003\"\200\001\n\013Car" +
+      "Response\022\n\n\002id\030\001 \001(\003\022\r\n\005brand\030\002 \001(\t\022\r\n\005m" +
+      "odel\030\003 \001(\t\022\024\n\014licensePlate\030\004 \001(\t\0221\n\004user" +
+      "\030\005 \001(\0132#.com.zwash.common.grpc.UserRespo" +
+      "nse2]\n\nCarService\022O\n\006GetCar\022!.com.zwash." +
+      "common.grpc.CarRequest\032\".com.zwash.commo" +
+      "n.grpc.CarResponseB*\n\025com.zwash.common.g" +
+      "rpcB\017CarServiceProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.zwash.common.grpc.UserServiceProto.getDescriptor(),
         });
     internal_static_com_zwash_common_grpc_CarRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -57,7 +60,8 @@ public final class Car {
     internal_static_com_zwash_common_grpc_CarResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_zwash_common_grpc_CarResponse_descriptor,
-        new java.lang.String[] { "Id", "Brand", "Model", "LicensePlate", });
+        new java.lang.String[] { "Id", "Brand", "Model", "LicensePlate", "User", });
+    com.zwash.common.grpc.UserServiceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

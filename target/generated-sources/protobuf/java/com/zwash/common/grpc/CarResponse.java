@@ -31,17 +31,18 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarResponse_descriptor;
+    return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarResponse_fieldAccessorTable
+    return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.zwash.common.grpc.CarResponse.class, com.zwash.common.grpc.CarResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   private long id_ = 0L;
   /**
@@ -170,6 +171,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int USER_FIELD_NUMBER = 5;
+  private com.zwash.common.grpc.UserResponse user_;
+  /**
+   * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+   * @return Whether the user field is set.
+   */
+  @java.lang.Override
+  public boolean hasUser() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+   * @return The user.
+   */
+  @java.lang.Override
+  public com.zwash.common.grpc.UserResponse getUser() {
+    return user_ == null ? com.zwash.common.grpc.UserResponse.getDefaultInstance() : user_;
+  }
+  /**
+   * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+   */
+  @java.lang.Override
+  public com.zwash.common.grpc.UserResponseOrBuilder getUserOrBuilder() {
+    return user_ == null ? com.zwash.common.grpc.UserResponse.getDefaultInstance() : user_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -196,6 +223,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(licensePlate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, licensePlate_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(5, getUser());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -217,6 +247,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(licensePlate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, licensePlate_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getUser());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -241,6 +275,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getModel())) return false;
     if (!getLicensePlate()
         .equals(other.getLicensePlate())) return false;
+    if (hasUser() != other.hasUser()) return false;
+    if (hasUser()) {
+      if (!getUser()
+          .equals(other.getUser())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -261,6 +300,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getModel().hashCode();
     hash = (37 * hash) + LICENSEPLATE_FIELD_NUMBER;
     hash = (53 * hash) + getLicensePlate().hashCode();
+    if (hasUser()) {
+      hash = (37 * hash) + USER_FIELD_NUMBER;
+      hash = (53 * hash) + getUser().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -367,26 +410,32 @@ private static final long serialVersionUID = 0L;
       com.zwash.common.grpc.CarResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarResponse_descriptor;
+      return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarResponse_fieldAccessorTable
+      return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.zwash.common.grpc.CarResponse.class, com.zwash.common.grpc.CarResponse.Builder.class);
     }
 
     // Construct using com.zwash.common.grpc.CarResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getUserFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -396,13 +445,18 @@ private static final long serialVersionUID = 0L;
       brand_ = "";
       model_ = "";
       licensePlate_ = "";
+      user_ = null;
+      if (userBuilder_ != null) {
+        userBuilder_.dispose();
+        userBuilder_ = null;
+      }
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.zwash.common.grpc.Car.internal_static_com_zwash_common_grpc_CarResponse_descriptor;
+      return com.zwash.common.grpc.CarServiceProto.internal_static_com_zwash_common_grpc_CarResponse_descriptor;
     }
 
     @java.lang.Override
@@ -441,6 +495,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.licensePlate_ = licensePlate_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.user_ = userBuilder_ == null
+            ? user_
+            : userBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -505,6 +567,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.hasUser()) {
+        mergeUser(other.getUser());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -551,6 +616,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getUserFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -814,6 +886,127 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
+    }
+
+    private com.zwash.common.grpc.UserResponse user_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.zwash.common.grpc.UserResponse, com.zwash.common.grpc.UserResponse.Builder, com.zwash.common.grpc.UserResponseOrBuilder> userBuilder_;
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     * @return Whether the user field is set.
+     */
+    public boolean hasUser() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     * @return The user.
+     */
+    public com.zwash.common.grpc.UserResponse getUser() {
+      if (userBuilder_ == null) {
+        return user_ == null ? com.zwash.common.grpc.UserResponse.getDefaultInstance() : user_;
+      } else {
+        return userBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     */
+    public Builder setUser(com.zwash.common.grpc.UserResponse value) {
+      if (userBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        user_ = value;
+      } else {
+        userBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     */
+    public Builder setUser(
+        com.zwash.common.grpc.UserResponse.Builder builderForValue) {
+      if (userBuilder_ == null) {
+        user_ = builderForValue.build();
+      } else {
+        userBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     */
+    public Builder mergeUser(com.zwash.common.grpc.UserResponse value) {
+      if (userBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          user_ != null &&
+          user_ != com.zwash.common.grpc.UserResponse.getDefaultInstance()) {
+          getUserBuilder().mergeFrom(value);
+        } else {
+          user_ = value;
+        }
+      } else {
+        userBuilder_.mergeFrom(value);
+      }
+      if (user_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     */
+    public Builder clearUser() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      user_ = null;
+      if (userBuilder_ != null) {
+        userBuilder_.dispose();
+        userBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     */
+    public com.zwash.common.grpc.UserResponse.Builder getUserBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getUserFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     */
+    public com.zwash.common.grpc.UserResponseOrBuilder getUserOrBuilder() {
+      if (userBuilder_ != null) {
+        return userBuilder_.getMessageOrBuilder();
+      } else {
+        return user_ == null ?
+            com.zwash.common.grpc.UserResponse.getDefaultInstance() : user_;
+      }
+    }
+    /**
+     * <code>.com.zwash.common.grpc.UserResponse user = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.zwash.common.grpc.UserResponse, com.zwash.common.grpc.UserResponse.Builder, com.zwash.common.grpc.UserResponseOrBuilder> 
+        getUserFieldBuilder() {
+      if (userBuilder_ == null) {
+        userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.zwash.common.grpc.UserResponse, com.zwash.common.grpc.UserResponse.Builder, com.zwash.common.grpc.UserResponseOrBuilder>(
+                getUser(),
+                getParentForChildren(),
+                isClean());
+        user_ = null;
+      }
+      return userBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

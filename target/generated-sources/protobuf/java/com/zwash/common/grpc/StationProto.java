@@ -4,8 +4,8 @@
 // Protobuf Java Version: 3.25.1
 package com.zwash.common.grpc;
 
-public final class Station {
-  private Station() {}
+public final class StationProto {
+  private StationProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -34,18 +34,22 @@ public final class Station {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rstation.proto\022\025com.zwash.common.grpc\"\034" +
-      "\n\016StationRequest\022\n\n\002id\030\001 \001(\003\"a\n\017StationR" +
-      "esponse\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010lat" +
-      "itude\030\003 \001(\001\022\021\n\tlongitude\030\004 \001(\001\022\017\n\007addres" +
-      "s\030\005 \001(\t2m\n\016StationService\022[\n\nGetStation\022" +
-      "%.com.zwash.common.grpc.StationRequest\032&" +
-      ".com.zwash.common.grpc.StationResponseB\002" +
-      "P\001b\006proto3"
+      "\n\rstation.proto\022\025com.zwash.common.grpc\032\026" +
+      "service_provider.proto\"\034\n\016StationRequest" +
+      "\022\n\n\002id\030\001 \001(\003\"\252\001\n\017StationResponse\022\n\n\002id\030\001" +
+      " \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010latitude\030\003 \001(\001\022\021\n\t" +
+      "longitude\030\004 \001(\001\022\017\n\007address\030\005 \001(\t\022G\n\017serv" +
+      "iceProvider\030\006 \001(\0132..com.zwash.common.grp" +
+      "c.ServiceProviderResponse2m\n\016StationServ" +
+      "ice\022[\n\nGetStation\022%.com.zwash.common.grp" +
+      "c.StationRequest\032&.com.zwash.common.grpc" +
+      ".StationResponseB\'\n\025com.zwash.common.grp" +
+      "cB\014StationProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.zwash.common.grpc.ServiceProviderProto.getDescriptor(),
         });
     internal_static_com_zwash_common_grpc_StationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -58,7 +62,8 @@ public final class Station {
     internal_static_com_zwash_common_grpc_StationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_zwash_common_grpc_StationResponse_descriptor,
-        new java.lang.String[] { "Id", "Name", "Latitude", "Longitude", "Address", });
+        new java.lang.String[] { "Id", "Name", "Latitude", "Longitude", "Address", "ServiceProvider", });
+    com.zwash.common.grpc.ServiceProviderProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

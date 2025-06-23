@@ -244,7 +244,7 @@ public final class StationServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.zwash.common.grpc.Station.getDescriptor();
+      return com.zwash.common.grpc.StationProto.getDescriptor();
     }
 
     @java.lang.Override

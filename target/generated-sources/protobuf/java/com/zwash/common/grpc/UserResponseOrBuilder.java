@@ -73,4 +73,16 @@ public interface UserResponseOrBuilder extends
    * @return The admin.
    */
   boolean getAdmin();
+
+  /**
+   * <code>string token = 8;</code>
+   * @return The token.
+   */
+  java.lang.String getToken();
+  /**
+   * <code>string token = 8;</code>
+   * @return The bytes for token.
+   */
+  com.google.protobuf.ByteString
+      getTokenBytes();
 }

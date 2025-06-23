@@ -1,7 +1,13 @@
 syntax = "proto3";
 
 package com.zwash.common.grpc;
+
 option java_multiple_files = true;
+option java_package = "com.zwash.common.grpc";
+option java_outer_classname = "StationProto";
+
+import "service_provider.proto"; 
+
 message StationRequest {
   int64 id = 1;
 }
@@ -12,6 +18,9 @@ message StationResponse {
   double latitude = 3;
   double longitude = 4;
   string address = 5;
+
+ 
+  ServiceProviderResponse serviceProvider = 6;
 }
 
 service StationService {

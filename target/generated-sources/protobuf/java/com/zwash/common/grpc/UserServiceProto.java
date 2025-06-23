@@ -41,17 +41,17 @@ public final class UserServiceProto {
     java.lang.String[] descriptorData = {
       "\n\nuser.proto\022\025com.zwash.common.grpc\"\033\n\rU" +
       "serIdRequest\022\n\n\002id\030\001 \001(\003\"\035\n\014TokenRequest" +
-      "\022\r\n\005token\030\001 \001(\t\"\205\001\n\014UserResponse\022\n\n\002id\030\001" +
+      "\022\r\n\005token\030\001 \001(\t\"\224\001\n\014UserResponse\022\n\n\002id\030\001" +
       " \001(\003\022\020\n\010username\030\002 \001(\t\022\021\n\tfirstName\030\003 \001(" +
       "\t\022\020\n\010lastName\030\004 \001(\t\022\023\n\013dateOfBirth\030\005 \001(\t" +
-      "\022\016\n\006active\030\006 \001(\010\022\r\n\005admin\030\007 \001(\0102\305\001\n\013User" +
-      "Service\022X\n\013GetUserById\022$.com.zwash.commo" +
-      "n.grpc.UserIdRequest\032#.com.zwash.common." +
-      "grpc.UserResponse\022\\\n\020GetUserFromToken\022#." +
-      "com.zwash.common.grpc.TokenRequest\032#.com" +
-      ".zwash.common.grpc.UserResponseB+\n\025com.z" +
-      "wash.common.grpcB\020UserServiceProtoP\001b\006pr" +
-      "oto3"
+      "\022\016\n\006active\030\006 \001(\010\022\r\n\005admin\030\007 \001(\010\022\r\n\005token" +
+      "\030\010 \001(\t2\305\001\n\013UserService\022X\n\013GetUserById\022$." +
+      "com.zwash.common.grpc.UserIdRequest\032#.co" +
+      "m.zwash.common.grpc.UserResponse\022\\\n\020GetU" +
+      "serFromToken\022#.com.zwash.common.grpc.Tok" +
+      "enRequest\032#.com.zwash.common.grpc.UserRe" +
+      "sponseB+\n\025com.zwash.common.grpcB\020UserSer" +
+      "viceProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,7 +74,7 @@ public final class UserServiceProto {
     internal_static_com_zwash_common_grpc_UserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_zwash_common_grpc_UserResponse_descriptor,
-        new java.lang.String[] { "Id", "Username", "FirstName", "LastName", "DateOfBirth", "Active", "Admin", });
+        new java.lang.String[] { "Id", "Username", "FirstName", "LastName", "DateOfBirth", "Active", "Admin", "Token", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

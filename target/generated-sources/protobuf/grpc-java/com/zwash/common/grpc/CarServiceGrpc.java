@@ -244,7 +244,7 @@ public final class CarServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.zwash.common.grpc.Car.getDescriptor();
+      return com.zwash.common.grpc.CarServiceProto.getDescriptor();
     }
 
     @java.lang.Override
