@@ -7,5 +7,4 @@ RUN mvn clean install -DskipTests
 FROM openjdk:17-jdk-slim
 WORKDIR /app
 COPY --from=builder /app/target/*.jar ZwashCommon.jar
-
 RUN mvn clean package -DskipTests
