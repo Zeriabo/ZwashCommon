@@ -5,13 +5,6 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.zwash</groupId>
-		<artifactId>zwash-parent</artifactId>
-		<version>1.0.0</version>
-		<relativePath>../../pom.xml</relativePath>
-	</parent>
-
 	<groupId>com.zwash.common</groupId>
 	<artifactId>ZwashCommon</artifactId>
 	<version>1.0.0</version>
